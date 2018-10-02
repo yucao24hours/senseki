@@ -8,6 +8,17 @@ class MatchesController < ApplicationController
   end
 
   def create
-    redirect_to matches_path
+    @match = Match.new(match_params)
+    if @match.save
+      redirect_to matches_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def match_params
+    params.require(:match).permit(:saki)
   end
 end
