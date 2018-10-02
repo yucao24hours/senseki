@@ -1,4 +1,8 @@
 %h1 新しいマッチをはじめる
 = form_for @match do |f|
   = f.select :saki, (1..10).to_a
+  = f.fields_for :members do |member_form|
+    = member_form.label "メンバー名"
+    = member_form.text_field :name
+
   = f.submit
