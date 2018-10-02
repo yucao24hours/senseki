@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_23_090959) do
+ActiveRecord::Schema.define(version: 2018_10_02_140728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "match_members", force: :cascade do |t|
+    t.bigint "member_id"
+    t.bigint "match_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["match_id"], name: "index_match_members_on_match_id"
+    t.index ["member_id"], name: "index_match_members_on_member_id"
+  end
 
   create_table "matches", force: :cascade do |t|
     t.integer "saki", null: false
@@ -21,4 +30,12 @@ ActiveRecord::Schema.define(version: 2018_09_23_090959) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "members", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "match_members", "matches"
+  add_foreign_key "match_members", "members"
 end
