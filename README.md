@@ -1,24 +1,9 @@
-# README
+# Senseki
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Senseki tracks your TKS results :memo:
 
-Things you may want to cover:
+## How to run in local
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ cp .env.sample .env
+```
