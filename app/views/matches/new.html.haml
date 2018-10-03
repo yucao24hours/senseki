@@ -2,27 +2,27 @@
 = form_tag matches_path do
   = select_tag :saki, options_for_select((1..10).to_a)
   = label_tag :member_1
-  = text_field_tag "member_names[]", nil, { id: :member_1 }
+  = text_field_tag "member_names[]", nil, { id: :member_1, required: "required" }
 
   = label_tag :member_2
-  = text_field_tag "member_names[]", nil, { id: :member_2 }
+  = text_field_tag "member_names[]", nil, { id: :member_2, required: "required" }
 
   = label_tag :member_3
-  = text_field_tag "member_names[]", nil, { id: :member_3 }
+  = text_field_tag "member_names[]", nil, { id: :member_3, required: "required" }
 
   = label_tag :member_4
-  = text_field_tag "member_names[]", nil, { id: :member_4 }
+  = text_field_tag "member_names[]", nil, { id: :member_4, required: "required" }
 
   = label_tag :member_5
-  = text_field_tag "member_names[]", nil, { id: :member_5 }
+  = text_field_tag "member_names[]", nil, { id: :member_5, required: "required" }
 
   = label_tag :member_6
-  = text_field_tag "member_names[]", nil, { id: :member_6 }
+  = text_field_tag "member_names[]", nil, { id: :member_6, required: "required" }
 
   = label_tag :member_7
-  = text_field_tag "member_names[]", nil, { id: :member_7 }
+  = text_field_tag "member_names[]", nil, { id: :member_7, required: "required" }
 
   = label_tag :member_8
-  = text_field_tag "member_names[]", nil, { id: :member_8 }
+  = text_field_tag "member_names[]", nil, { id: :member_8, required: "required" }
 
   = submit_tag "はじめる！"
