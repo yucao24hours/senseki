@@ -8,6 +8,7 @@ class MatchesController < ApplicationController
   end
 
   def create
+    binding.pry
     @match = Match.new(match_params)
     if @match.save
       # TODO: 今は index に遷移しているが、本来は「1試合目の結果入力画面」
@@ -21,6 +22,6 @@ class MatchesController < ApplicationController
   private
 
   def match_params
-    params.require(:match).permit(:saki)
+    params.permit(:saki)
   end
 end
